@@ -1,0 +1,108 @@
+{% load  static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Uploaded - App</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<script src="https://use.fontawesome.com/1f5637c077.js"></script>
+	<!-- Font -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
+	
+	
+	<link href="common-css/ionicons.css" rel="stylesheet">
+	
+	
+	<link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+		
+	<link href="{% static 'authentication/styles.css' %}" rel="stylesheet">
+	<script src="{% static 'authentication/jquery.js' %}" type="text/javascript"></script>
+	
+	<link href="{% static 'authentication/responsive.css' %}" rel="stylesheet">
+	
+</head>
+<body>
+	
+	<div class="main-area">
+		
+		<section class="left-section">
+			<img id="uploadedLogo" src="{% static 'authentication/logo.png' %}"/>
+		</section><!-- left-section -->
+		
+		
+		<section class="right-section full-height">
+		
+			<div class="display-table">
+				<div class="display-table-cell">
+					<div class="main-content">
+						<h1 class="title"><b>Uploaded Beta Testing</b></h1>
+						<p class="desc">Bringing you closer to the music.
+							Stream and connect with your favourite artists.</p>	
+							<div id="storeImgss">
+								<img src="{% static 'authentication/play.png' %}" onclick="GooglePlay()" class="storeImg" />
+								<img src="{% static 'authentication/ios.png' %}" onclick="ios()" class="storeImg ios" />
+							</div>
+							
+<!-- 							
+							<input type="text" id="nameInput" placeholder="Username" required><br/>
+							<input type="email" id="emailInput" placeholder="email address" required><br/>
+
+							<button id="signUpBtn" onclick="signUp()">Sign up</button>
+
+
+						<p class="post-desc">Sign up and download our app to test today,<br/> Download links below.</p><br/>
+						<a href="https://install.appcenter.ms/users/joeyalpha5/apps/Uploaded-1/distribution_groups/Testers"><button>iOS</button></a>
+						<a href="https://install.appcenter.ms/users/joeyalpha5/apps/Uploaded/distribution_groups/Testers"><button>Android</button></a> -->
+						
+					</div><!-- main-content -->
+				</div><!-- display-table-cell -->
+			</div><!-- display-table -->
+		
+		</section><!-- right-section -->
+		
+	</div><!-- main-area -->
+	
+	<!-- SCIPTS -->
+	
+	<script src="common-js/jquery-3.1.1.min.js"></script>
+	
+	<script src="common-js/jquery.countdown.min.js"></script>
+	
+	<script src="common-js/scripts.js"></script>
+
+
+	<script>
+
+		function ios(){
+			window.open("https://appdistribution.firebase.dev/i/bXhScQmT");
+		}
+
+		function GooglePlay(){
+			window.open("https://play.google.com/store/apps/details?id=uploaded.uploaded");
+		}
+		// function signUp(){
+		// 	var username =  $("#nameInput").val();
+		// 	var email = $("#emailInput").val();
+
+		// 	if(username != "" && email != ""){
+		// 		$.ajax({
+        //         "type":"POST",
+        //         "url":"/users/users",
+        //         "dataType":"json",
+        //         "async":true,
+        //         "data":{  "csrfmiddlewaretoken": "{{ csrf_token }}", "type":"testSignUp","username":username,"email":email},
+        //         "success":function(data){
+        //             alert("your account has been created, your password is has been emailed.")
+        //         }
+        //     });
+		// 	}
+			
+		// }
+	
+	</script>
+	
+</body>
+</html>
